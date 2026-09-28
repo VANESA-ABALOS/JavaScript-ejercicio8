@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Ejercicio 8. </title>
+        <meta charset="UTF-8">
+       
+        </head>
+         <body>  
+             <h1> Modelo Examen M.Choice</h1>
+             <h2>Programación web</h2>
+            <br>
+          <div class="pregunta">
+          <label for="p1">1. ¿Cuál es de estas opciones corresponde a un lenguaje de programación?</label>
+          <select id="p1">
+            <option value="">-- Selecciona una respuesta --</option>
+            <option value="correcto"> Phyton</option>
+            <option value="incorrecto"> Button</option>
+            <option value="incorrecto">Monitor</option>
+           </select>
+          </div>
+          <br>
+          <br>
+    
+          <div class="pregunta">
+          <label for="p2">2. ¿Cúal de estos operadores significa que dos elementos son del mismo valor y tipo?</label>
+          <select id="p2">
+            <option value="">-- Selecciona una respuesta --</option>
+            <option value="incorrecto">=> </option>
+            <option value="correcto">===</option>
+            <option value="incorrecto">==</option>
+          </select>
+          </div>
+             <br>
+             <br>
+    
+          <div class="pregunta">
+          <label for="p3">3. ¿Cúal de estas palabras claves se usa para declarar una variable?</label>
+          <select id="p3">
+            <option value="">-- Selecciona una respuesta --</option>
+            <option value="incorrecto"> fin </option>
+            <option value="incorrecto">if</option>
+            <option value="correcto">let</option>
+          </select>
+          </div>
+          <br>
+          <br>
+          <div class="pregunta">
+          <label for="p4">4. ¿Qué etiqueta HTML se utiliza para insertar código JavaScript?</label>
+          <select id="p4">
+            <option value="">-- Selecciona una respuesta --</option>
+            <option value="incorrecto">javascript</option>
+            <option value="correcto">script</option>
+            <option value="incorrecto">code</option>
+           </select>
+           </div>
+           <br>
+           <br>
+           
+            <button onclick="corregirExamen()">Verificar Respuestas</button>
+            <div><p id="resultado"></p></div>
+            </body>
+            
+            <script>   
+            function corregirExamen() {
+            let correctas = 0;
+            let incorrectas=0;
+            
+
+            let r1 = document.getElementById("p1").value;
+            let r2 = document.getElementById("p2").value;
+            let r3 = document.getElementById("p3").value;
+            let r4 = document.getElementById("p4").value;
+          
+            if (r1 === "correcto"){ correctas++;} 
+            else {incorrectas++;}
+            if (r2 === "correcto") {correctas++;}
+            else {incorrectas++;}
+            if (r3 === "correcto") {correctas++;}
+            else {incorrectas++;}
+            if (r4 === "correcto") {correctas++;}
+            else {incorrectas++;}
+  
+           document.getElementById("resultado").innerText ="Respuestas Correctas: " + correctas;
+          }
+         </script>
+           
+           
+    
+    
+
+     
+</html>
